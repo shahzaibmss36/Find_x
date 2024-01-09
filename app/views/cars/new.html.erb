@@ -1,0 +1,10 @@
+<div class = "container">
+    <h1>Car new</h1>
+    <%= form_for @car do |form| %>
+        <%= form.text_field :company, placeholder: "company"%>
+        <%= form.text_field :model, placeholder: "model"%>
+        <%= form.text_field :color, placeholder: "color"%>
+        <%= form.text_field :price, placeholder: "price"%>
+        <%= form.submit %>
+        <% end %>
+</div>

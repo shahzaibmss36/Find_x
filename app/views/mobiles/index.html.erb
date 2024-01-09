@@ -1,0 +1,20 @@
+<div class = "container">
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @mobiles.each do |mob|%>
+            <tr>
+                <td><%= mob.company %></td>
+                <td><%= link_to "Edit", edit_mobile_path(mob.id) %></td>
+                <td><%= link_to "Show", mobile_path(mob.id) %></td>
+                <td><%= button_to "Delete", mobile_path(mob), method: 'delete' %></td>
+            </tr>    
+            <% end %>
+        </tbody>
+    </table>
+</div>
